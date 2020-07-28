@@ -10,4 +10,11 @@
   height: 40px;
   width: 40px;
   outline: 1px solid hotpink;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.bomb {
+  background-color: orange;
 }
