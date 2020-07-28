@@ -48,6 +48,18 @@ document.addEventListener('DOMContentLoaded', () => {
         // Look down
         if (!isBottomEdge && squares[i+width].classList.contains('bomb'))
           nearbyBombs++;
+        // Upper left
+        if (!isTopEdge && !isLeftEdge && squares[i-width-1].classList.contains('bomb'))
+          nearbyBombs++;
+        // Upper right
+        if (!isTopEdge && !isRightEdge && squares[i-width+1].classList.contains('bomb'))
+          nearbyBombs++;
+        // Lower left
+        if (!isBottomEdge && !isLeftEdge && squares[i+width-1].classList.contains('bomb'))
+          nearbyBombs++;
+        // Lower right
+        if (!isBottomEdge && !isRightEdge && squares[i+width+1].classList.contains('bomb'))
+          nearbyBombs++;
         
         document.getElementById(i).innerHTML = nearbyBombs;
       }
