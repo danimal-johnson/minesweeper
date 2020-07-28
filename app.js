@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (square.classList.contains('checked') || square.classList.contains('flag'))
       return;
     if (square.classList.contains('bomb')) {
-      square.innerHTML=('B');
-      isGameOver = true;
+      // square.innerHTML=('B');
+      gameOver(square);
     } else {
       const bombs = square.getAttribute('data');
       if(bombs != 0) {
@@ -137,9 +137,18 @@ document.addEventListener('DOMContentLoaded', () => {
         const newSquare = document.getElementById(newId);
         leftClickHandler(newSquare);
       }
+    }, 10); // setTimeout
+  } // checkSquare
 
-    }, 10);
+  function gameOver(square) {
+    console.log('BOOM! Game over!');
+    isGameOver = true;
 
+    // Show all the bombs
+    squares.forEach(square => {
+      if (square.classList.contains('bomb')) {
+        square.innerHTML = 'B';
+      }
+    })
   }
-
 });
