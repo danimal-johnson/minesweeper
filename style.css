@@ -3,22 +3,35 @@
   width: 400px;
   display: flex;
   flex-wrap: wrap;
-  background-color: grey;
+  background-color: #bdbdbd;
 }
 
 .grid div {
-  height: 40px;
-  width: 40px;
-  outline: 1px solid hotpink;
+  height: 36px;
+  width: 36px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid #7b7b7b;
+  border-bottom: 2px solid #7b7b7b;
   color: white;
+  outline: 1px solid #7b7b7b;
   font-family: sans-serif;
   text-align: center;
 }
 
 .bomb {
-  background-color: orange;
+  /* Debugging: background-color: orange; */
 }
 
 .clear {
+  /* background-color: #bdbdbd;
+   border: 2px solid #bdbdbd; */
   background-color: green;
+  border-left: 2px solid purple;
+}
+
+.checked {
+  /* background-color: #bdbdbd; */
+  background-color: rgb(143, 143, 143);
+  border: 2px solid green;
 }
